@@ -163,28 +163,6 @@ require('lazy').setup({
   --   end,
   -- },
 
-  -- Not from Kickstart
-  -- {
-  --   "catppuccin/nvim",
-  --   name = "catppuccin",
-  --   priority = 1000,
-  --   config = function()
-  --     vim.cmd.colorscheme 'catppuccin-frappe'
-  --   end,
-  -- },
-  {
-    "Mofiqul/dracula.nvim",
-    name = "dracula",
-    priority = 1000,
-    config = function()
-      vim.cmd.colorscheme 'dracula'
-    end,
-  },
-  'ThePrimeagen/vim-be-good',
-  'christoomey/vim-tmux-navigator',
-  'nvim-treesitter/nvim-treesitter-context',
-  -- Not from Kickstart
-
   {
     -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',
@@ -245,7 +223,7 @@ require('lazy').setup({
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.
   --       Uncomment any of the lines below to enable them.
-  -- require 'kickstart.plugins.autoformat',
+  require 'kickstart.plugins.autoformat',
   -- require 'kickstart.plugins.debug',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
@@ -254,7 +232,7 @@ require('lazy').setup({
   --    Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
   --
   --    For additional information see: https://github.com/folke/lazy.nvim#-structuring-your-plugins
-  -- { import = 'custom.plugins' },
+  { import = 'custom.plugins' },
 }, {})
 
 -- [[ Setting options ]]
