@@ -19,13 +19,15 @@ config.color_scheme = 'Urple'
 -- a single tab in the window
 config.hide_tab_bar_if_only_one_tab = true
 
-config.window_background_gradient = {
-  colors = { '#190324', '#2e1d40' },
-  -- Specifices a Linear gradient starting in the top left corner.
-  orientation = { Linear = { angle = -45.0 } },
-}
+config.native_macos_fullscreen_mode = true
 
+-- config.window_background_gradient = {
+--   colors = { '#190324', '#2e1d40' },
+--   -- Specifices a Linear gradient starting in the top left corner.
+--   orientation = { Linear = { angle = -45.0 } },
+-- }
+
+config.color_scheme = 'Catppuccin Frappe'
 --
 -- and finally, return the configuration to wezterm
 return config
-

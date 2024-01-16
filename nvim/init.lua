@@ -170,8 +170,8 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = false,
-        -- theme = 'catppuccin-frappe',
-        theme = 'dracula-nvim',
+        theme = 'catppuccin-macchiato',
+        -- theme = 'dracula-nvim',
         component_separators = '|',
         section_separators = '',
       },
