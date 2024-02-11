@@ -9,5 +9,3 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 -- Center screen when searching
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
-
-

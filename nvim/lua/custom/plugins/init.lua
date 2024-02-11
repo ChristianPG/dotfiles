@@ -22,4 +22,6 @@ return {
 	'ThePrimeagen/vim-be-good',
 	'christoomey/vim-tmux-navigator',
 	'nvim-treesitter/nvim-treesitter-context',
+	'ThePrimeagen/harpoon',
+	'github/copilot.vim',
 }
