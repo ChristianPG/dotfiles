@@ -24,4 +24,11 @@ return {
 	'nvim-treesitter/nvim-treesitter-context',
 	'ThePrimeagen/harpoon',
 	'github/copilot.vim',
+	{ "shortcuts/no-neck-pain.nvim", version = "*" },
+	{
+		"iamcco/markdown-preview.nvim",
+		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+		ft = { "markdown" },
+		build = function() vim.fn["mkdp#util#install"]() end,
+	}
 }
