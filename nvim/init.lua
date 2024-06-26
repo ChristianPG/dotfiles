@@ -364,7 +364,6 @@ require('lazy').setup({
         defaults = {
           mappings = {
             i = {
-              ['<C-u>'] = false,
               ['<C-e>'] = require('telescope.actions').delete_buffer,
             },
             n = {

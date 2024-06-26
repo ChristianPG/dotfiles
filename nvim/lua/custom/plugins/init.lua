@@ -21,7 +21,10 @@ return {
   -- },
   'ThePrimeagen/vim-be-good',
   'christoomey/vim-tmux-navigator',
-  'nvim-treesitter/nvim-treesitter-context',
+  {
+    'nvim-treesitter/nvim-treesitter-context',
+    opts = { multiline_threshold = 2 },
+  },
   'ThePrimeagen/harpoon',
   'github/copilot.vim',
   { 'shortcuts/no-neck-pain.nvim', version = '*' },
