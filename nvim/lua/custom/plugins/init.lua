@@ -27,6 +27,7 @@ return {
   },
   'ThePrimeagen/harpoon',
   'github/copilot.vim',
+  'tpope/vim-fugitive',
   { 'shortcuts/no-neck-pain.nvim', version = '*' },
   {
     'iamcco/markdown-preview.nvim',
