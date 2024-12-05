@@ -370,9 +370,11 @@ require('lazy').setup({
           mappings = {
             i = {
               ['<C-e>'] = require('telescope.actions').delete_buffer,
+              ['<C-h>'] = require('telescope.actions.layout').toggle_preview,
             },
             n = {
               ['<C-e>'] = require('telescope.actions').delete_buffer,
+              ['<C-h>'] = require('telescope.actions.layout').toggle_preview,
             },
           },
         },
@@ -388,10 +390,10 @@ require('lazy').setup({
             -- theme = 'dropdown',
           },
           grep_string = {
-            additional_args = { '--hidden', '--glob=!pnpm-lock.yaml', '--glob=!.git/' },
+            additional_args = { '--hidden', '--glob=!pnpm-lock.yaml', '--glob=!.git/', '--glob=!**/__snapshots__/**' },
           },
           live_grep = {
-            additional_args = { '--hidden', '--glob=!pnpm-lock.yaml', '--glob=!.git/' },
+            additional_args = { '--hidden', '--glob=!pnpm-lock.yaml', '--glob=!.git/', '--glob=!**/__snapshots__/**' },
           },
         },
         -- Not from Kickstart
