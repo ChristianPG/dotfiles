@@ -350,6 +350,8 @@ require('lazy').setup({
 
       -- [[ Configure Telescope ]]
       -- See `:help telescope` and `:help telescope.setup()`
+      local width = 0.95
+      local height = 0.95
       require('telescope').setup {
         -- You can put your default mappings / updates / etc. in here
         --  All the info you're looking for is in `:help telescope.setup()`
@@ -367,20 +369,30 @@ require('lazy').setup({
         },
         -- Not from Kickstart
         defaults = {
+          layout_strategy = 'vertical',
+          layout_config = {
+            width = width,
+            height = height,
+          },
+          prompt_prefix = '  ',
+          selection_caret = '   ',
           mappings = {
             i = {
               ['<C-e>'] = require('telescope.actions').delete_buffer,
               ['<C-h>'] = require('telescope.actions.layout').toggle_preview,
+              ['<C-l>'] = require('telescope.actions.layout').cycle_layout_next,
             },
             n = {
               ['<C-e>'] = require('telescope.actions').delete_buffer,
               ['<C-h>'] = require('telescope.actions.layout').toggle_preview,
+              ['<C-l>'] = require('telescope.actions.layout').cycle_layout_next,
             },
           },
         },
         pickers = {
           buffers = {
             initial_mode = 'normal',
+            sort_lastused = true,
           },
           find_files = {
             hidden = true,
