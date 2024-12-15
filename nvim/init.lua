@@ -544,6 +544,15 @@ require('lazy').setup({
           -- or a suggestion from your LSP for this to activate.
           map('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
 
+          -- Not from Kickstart
+          -- Code actions
+          vim.keymap.set('n', '<leader>cp', '<cmd>silent !yarn prettier % --write<CR>', { desc = 'Prettify a file - Requires Prettier' })
+          vim.keymap.set('n', '<leader>cj', '<cmd>silent cnext<CR>', { desc = 'Quickfix List - Go to next item' })
+          vim.keymap.set('n', '<leader>ck', '<cmd>silent cprev<CR>', { desc = 'Quickfix List - Go to previous item' })
+          vim.keymap.set('n', '<leader>cc', '<cmd>silent cclose<CR>', { desc = 'Quickfix List - Close' })
+          vim.keymap.set('n', '<leader>co', '<cmd>silent copen<CR>', { desc = 'Quickfix List - Open' })
+          -- Not from Kickstart
+
           -- Opens a popup that displays documentation about the word under your cursor
           --  See `:help K` for why this keymap.
           map('K', vim.lsp.buf.hover, 'Hover Documentation')
