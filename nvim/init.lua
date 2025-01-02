@@ -407,6 +407,12 @@ require('lazy').setup({
           live_grep = {
             additional_args = { '--hidden', '--glob=!pnpm-lock.yaml', '--glob=!.git/', '--glob=!**/__snapshots__/**' },
           },
+          lsp_references = {
+            fname_width = 100,
+          },
+          lsp_definitions = {
+            fname_width = 100,
+          },
         },
         -- Not from Kickstart
       }
