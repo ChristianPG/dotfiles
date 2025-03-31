@@ -15,3 +15,11 @@ vim.keymap.set('n', 'H', '^')
 vim.keymap.set('v', 'H', '^')
 vim.keymap.set('n', 'L', '$')
 vim.keymap.set('v', 'L', '$')
+
+-- Save buffers with Ctrl + S
+vim.keymap.set('n', '<C-s>', ':w<CR>')
+vim.keymap.set('n', '<C-S-s>', ':wa<CR>')
+vim.keymap.set('v', '<C-s>', ':<BS><BS><BS><BS><BS>w<CR>gv')
+vim.keymap.set('v', '<C-S-s>', ':<BS><BS><BS><BS><BS>wa<CR>gv')
+vim.keymap.set('i', '<C-s>', '<ESC>:w<CR>a')
+vim.keymap.set('i', '<C-S-s>', '<ESC>:wa<CR>a')
