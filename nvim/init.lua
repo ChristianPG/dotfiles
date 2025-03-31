@@ -620,6 +620,7 @@ require('lazy').setup({
         cssmodules_ls = {},
         cssls = {},
         eslint = {},
+        angularls = {},
         -- Not from Kickstart
 
         lua_ls = {
@@ -665,6 +666,8 @@ require('lazy').setup({
             require('lspconfig')[server_name].setup(server)
           end,
         },
+        ensure_installed = {},
+        automatic_installation = true,
       }
     end,
   },
@@ -679,7 +682,7 @@ require('lazy').setup({
         -- languages here or re-enable it for the disabled ones.
         local disable_filetypes = { c = true, cpp = true }
         return {
-          timeout_ms = 500,
+          timeout_ms = 5000,
           lsp_fallback = not disable_filetypes[vim.bo[bufnr].filetype],
         }
       end,
@@ -690,6 +693,7 @@ require('lazy').setup({
         --
         -- You can use a sub-list to tell conform to run *until* a formatter
         -- is found.
+        html = { 'prettierd', 'prettier', stop_after_first = true, async = true, lsp_fallback = true },
         javascript = { 'prettierd', 'prettier', stop_after_first = true },
         typescript = { 'prettierd', 'prettier', stop_after_first = true },
         javascriptreact = { 'prettierd', 'prettier', stop_after_first = true },
