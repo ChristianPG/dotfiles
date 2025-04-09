@@ -25,7 +25,14 @@ return {
     'nvim-treesitter/nvim-treesitter-context',
     opts = { multiline_threshold = 2 },
   },
-  'ThePrimeagen/harpoon',
+  {
+    'theprimeagen/harpoon',
+    branch = 'harpoon2',
+    dependencies = { 'nvim-lua/plenary.nvim' },
+    config = function()
+      require('harpoon'):setup()
+    end,
+  },
   {
     'zbirenbaum/copilot.lua',
     cmd = 'Copilot',
