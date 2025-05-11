@@ -13,7 +13,7 @@ end
 -- This is where you actually apply your config choices
 
 -- For example, changing the color scheme:
-config.color_scheme = "Urple"
+config.color_scheme = "Catppuccin Frappe"
 
 -- set to true to hide the tab bar when there is only
 -- a single tab in the window
@@ -22,13 +22,14 @@ config.hide_tab_bar_if_only_one_tab = true
 config.native_macos_fullscreen_mode = true
 
 config.window_padding = {
-	left = "10px",
-	right = "10px",
-	top = 0,
-	bottom = 0,
+	left = "5px",
+	right = "5px",
+	top = "5px",
+	bottom = "0px",
 }
 
-config.color_scheme = "Catppuccin Frappe"
---
+config.window_decorations = "RESIZE"
+config.use_fancy_tab_bar = false
+
 -- and finally, return the configuration to wezterm
 return config
