@@ -10,4 +10,7 @@ nvm use
 
 alias gitui="gitui -t frappe.ron"
 
-pyenv init - fish | source
+# pyenv init - fish | source
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '~/google-cloud-sdk/path.fish.inc' ]; . '~/google-cloud-sdk/path.fish.inc'; end
