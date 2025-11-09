@@ -31,7 +31,12 @@ config.window_padding = {
 config.window_decorations = "NONE"
 config.use_fancy_tab_bar = false
 
-config.default_prog = { "/usr/bin/fish" }
+-- Use Fish as the default shell
+if wezterm.target_triple == "x86_64-unknown-linux-gnu" then
+	config.default_prog = { "/usr/bin/fish", "-l" }
+else
+	config.default_prog = { "/usr/local/bin/fish", "-l" }
+end
 
 -- and finally, return the configuration to wezterm
 return config
