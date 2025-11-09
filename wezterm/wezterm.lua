@@ -28,7 +28,7 @@ config.window_padding = {
 	bottom = "0px",
 }
 
-config.window_decorations = "RESIZE"
+config.window_decorations = "NONE"
 config.use_fancy_tab_bar = false
 
 -- and finally, return the configuration to wezterm
