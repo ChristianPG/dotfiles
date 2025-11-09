@@ -31,5 +31,7 @@ config.window_padding = {
 config.window_decorations = "NONE"
 config.use_fancy_tab_bar = false
 
+config.default_prog = { "/usr/bin/fish" }
+
 -- and finally, return the configuration to wezterm
 return config
