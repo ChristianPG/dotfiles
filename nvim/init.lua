@@ -622,7 +622,7 @@ require('lazy').setup({
         cssmodules_ls = {},
         cssls = {},
         eslint = {},
-        angularls = {},
+        -- angularls = {},
         -- Not from Kickstart
 
         lua_ls = {
