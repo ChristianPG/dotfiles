@@ -35,7 +35,7 @@ if wezterm.target_triple == "x86_64-unknown-linux-gnu" then
 	config.default_prog = { "/usr/bin/fish", "-l" }
 	config.window_decorations = "NONE"
 else
-	config.default_prog = { "/usr/local/bin/fish", "-l" }
+	config.default_prog = { "/opt/homebrew/bin/fish", "-l" }
 	config.window_decorations = "RESIZE"
 end
 
