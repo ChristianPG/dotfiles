@@ -25,6 +25,32 @@ return {
       --   If not available, we use `mini` as the fallback
       'rcarriga/nvim-notify',
     },
+    config = function()
+      require('noice').setup {
+        routes = {
+          {
+            view = 'notify',
+            filter = { event = 'msg_showmode' },
+            opts = { skip = true },
+          },
+          {
+            view = 'notify',
+            filter = { event = 'msg_show', find = 'yanked' },
+            opts = { skip = true },
+          },
+          {
+            view = 'notify',
+            filter = { event = 'msg_show', find = 'fewer lines' },
+            opts = { skip = true },
+          },
+          {
+            view = 'notify',
+            filter = { event = 'msg_show', find = 'more lines' },
+            opts = { skip = true },
+          },
+        },
+      }
+    end,
   },
   {
     'windwp/nvim-ts-autotag',
