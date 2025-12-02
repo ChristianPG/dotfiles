@@ -391,7 +391,6 @@ require('lazy').setup({
         },
         pickers = {
           buffers = {
-            initial_mode = 'normal',
             sort_lastused = true,
           },
           find_files = {
@@ -622,6 +621,7 @@ require('lazy').setup({
         cssmodules_ls = {},
         cssls = {},
         eslint = {},
+        tailwindcss = {},
         -- angularls = {},
         -- Not from Kickstart
 
