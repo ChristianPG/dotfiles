@@ -48,6 +48,11 @@ return {
             filter = { event = 'msg_show', find = 'more lines' },
             opts = { skip = true },
           },
+          {
+            view = 'notify',
+            filter = { find = 'No information available' },
+            opts = { skip = true },
+          },
         },
       }
     end,
