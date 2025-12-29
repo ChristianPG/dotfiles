@@ -257,6 +257,7 @@ require('lazy').setup({
         topdelete = { text = '‾' },
         changedelete = { text = '~-' },
       },
+      numhl = true,
     },
   },
 
