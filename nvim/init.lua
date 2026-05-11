@@ -891,8 +891,9 @@ require('lazy').setup({
         'vim',
         'vimdoc',
         'javascript',
+        'jsx',
         'typescript',
-        'typescriptreact',
+        'tsx',
       }
       require('nvim-treesitter').install(filetypes)
       vim.api.nvim_create_autocmd('FileType', {
