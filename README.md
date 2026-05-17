@@ -6,13 +6,13 @@ Instead of copying configs into `~/.config/`, this repo keeps everything in one 
 
 | Directory     | What it configures                    | Omarchy | macOS |
 |---------------|---------------------------------------|---------|-------|
+| `aerospace/`  | Aerospace (macOS window manager)      | No      | Yes   |
 | `hypr/`       | Hyprland (Wayland compositor)         | Yes     | No    |
 | `waybar/`     | Waybar (status bar)                   | Yes     | No    |
 | `nvim/`       | Neovim (editor)                       | Yes     | Yes   |
 | `tmux/`       | tmux (terminal multiplexer)           | Yes     | Yes   |
 | `fish/`       | Fish shell                            | Yes     | Yes   |
 | `wezterm/`    | WezTerm (terminal emulator)           | Yes     | Yes   |
-| `aerospace/`  | Aerospace (macOS window manager)      | Yes     | Yes   |
 | `gitui/`      | gitui (Git TUI client)                | Yes     | Yes   |
 
 ### First install Stow and then create the symlinks to all the configuration directories:
