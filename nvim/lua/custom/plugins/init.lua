@@ -270,4 +270,9 @@ return {
       vim.g.loaded_netrwPlugin = 1
     end,
   },
+  {
+    'windwp/nvim-autopairs',
+    event = 'InsertEnter',
+    config = true,
+  },
 }
