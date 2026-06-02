@@ -68,7 +68,26 @@ return {
     name = 'catppuccin',
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'catppuccin-macchiato'
+      require('catppuccin').setup {
+        flavour = 'macchiato', -- latte, frappe, macchiato, mocha
+        styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
+          comments = { 'italic' },
+          conditionals = { 'italic' },
+          loops = { 'italic' },
+          functions = {},
+          keywords = { 'italic' },
+          strings = {},
+          variables = {},
+          numbers = {},
+          booleans = { 'italic' },
+          properties = {},
+          types = { 'italic' },
+          operators = {},
+          -- miscs = {}, -- Uncomment to turn off hard-coded styles
+        },
+      }
+
+      vim.cmd.colorscheme 'catppuccin-nvim'
     end,
   },
   -- {
