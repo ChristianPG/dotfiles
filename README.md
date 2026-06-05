@@ -14,6 +14,7 @@ Instead of copying configs into `~/.config/`, this repo keeps everything in one 
 | `fish/`       | Fish shell                            | Yes     | Yes   |
 | `wezterm/`    | WezTerm (terminal emulator)           | Yes     | Yes   |
 | `gitui/`      | gitui (Git TUI client)                | Yes     | Yes   |
+| `yazi/`       | Yazi (Terminal file manager)          | Yes     | Yes   |
 
 ### First install Stow and then create the symlinks to all the configuration directories:
 ```bash
