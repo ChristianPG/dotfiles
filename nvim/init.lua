@@ -647,6 +647,7 @@ require('lazy').setup({
             },
           },
         },
+        docker_language_server = {},
       }
 
       -- Ensure the servers and tools above are installed
@@ -894,6 +895,7 @@ require('lazy').setup({
         'jsx',
         'typescript',
         'tsx',
+        'dockerfile',
       }
       require('nvim-treesitter').install(filetypes)
       vim.api.nvim_create_autocmd('FileType', {
