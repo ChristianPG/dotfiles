@@ -8,7 +8,6 @@ Instead of copying configs into `~/.config/`, this repo keeps everything in one 
 |---------------|---------------------------------------|---------|-------|
 | `aerospace/`  | Aerospace (macOS window manager)      | No      | Yes   |
 | `hypr/`       | Hyprland (Wayland compositor)         | Yes     | No    |
-| `waybar/`     | Waybar (status bar)                   | Yes     | No    |
 | `nvim/`       | Neovim (editor)                       | Yes     | Yes   |
 | `tmux/`       | tmux (terminal multiplexer)           | Yes     | Yes   |
 | `fish/`       | Fish shell                            | Yes     | Yes   |
