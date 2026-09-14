@@ -112,57 +112,57 @@ return {
       require('harpoon'):setup()
     end,
   },
-  -- {
-  --   'zbirenbaum/copilot.lua',
-  --   cmd = 'Copilot',
-  --   event = 'InsertEnter',
-  --   config = function()
-  --     require('copilot').setup {
-  --       panel = {
-  --         enabled = true,
-  --         auto_refresh = true,
-  --         keymap = {
-  --           jump_prev = '[[',
-  --           jump_next = ']]',
-  --           accept = '<CR>',
-  --           refresh = 'gr',
-  --           open = '<M-CR>',
-  --         },
-  --         layout = {
-  --           position = 'bottom', -- | top | left | right | horizontal | vertical
-  --           ratio = 0.4,
-  --         },
-  --       },
-  --       suggestion = {
-  --         enabled = true,
-  --         auto_trigger = true,
-  --         hide_during_completion = true,
-  --         debounce = 75,
-  --         keymap = {
-  --           accept = '<M-;>',
-  --           accept_word = false,
-  --           accept_line = false,
-  --           next = '<M-]>',
-  --           prev = '<M-[>',
-  --           dismiss = '<C-]>',
-  --         },
-  --       },
-  --       filetypes = {
-  --         yaml = false,
-  --         markdown = false,
-  --         help = false,
-  --         gitcommit = false,
-  --         gitrebase = false,
-  --         hgcommit = false,
-  --         svn = false,
-  --         cvs = false,
-  --         ['.'] = false,
-  --       },
-  --       copilot_node_command = 'node', -- Node.js version must be > 18.x
-  --       server_opts_overrides = {},
-  --     }
-  --   end,
-  -- },
+  {
+    'zbirenbaum/copilot.lua',
+    cmd = 'Copilot',
+    event = 'InsertEnter',
+    config = function()
+      require('copilot').setup {
+        panel = {
+          enabled = true,
+          auto_refresh = true,
+          keymap = {
+            jump_prev = '[[',
+            jump_next = ']]',
+            accept = '<CR>',
+            refresh = 'gr',
+            open = '<M-CR>',
+          },
+          layout = {
+            position = 'bottom', -- | top | left | right | horizontal | vertical
+            ratio = 0.4,
+          },
+        },
+        suggestion = {
+          enabled = true,
+          auto_trigger = true,
+          hide_during_completion = true,
+          debounce = 75,
+          keymap = {
+            accept = '<M-;>',
+            accept_word = false,
+            accept_line = false,
+            next = '<M-]>',
+            prev = '<M-[>',
+            dismiss = '<C-]>',
+          },
+        },
+        filetypes = {
+          yaml = false,
+          markdown = false,
+          help = false,
+          gitcommit = false,
+          gitrebase = false,
+          hgcommit = false,
+          svn = false,
+          cvs = false,
+          ['.'] = false,
+        },
+        copilot_node_command = 'node', -- Node.js version must be > 18.x
+        server_opts_overrides = {},
+      }
+    end,
+  },
   {
     'olimorris/codecompanion.nvim',
     dependencies = {
@@ -275,4 +275,22 @@ return {
     event = 'InsertEnter',
     config = true,
   },
+  {
+  "ThePrimeagen/git-worktree.nvim",
+    dependencies = { "nvim-telescope/telescope.nvim" },
+    config = function()
+      require("telescope").setup()
+      require("telescope").load_extension("git_worktree")
+      
+      -- Keymap to list/switch worktrees
+      vim.keymap.set("n", "<leader>gw", function()
+        require("telescope").extensions.git_worktree.git_worktrees()
+      end, { desc = "List Git worktrees" })
+
+      -- Keymap to create a worktree
+      vim.keymap.set("n", "<leader>gW", function()
+        require("telescope").extensions.git_worktree.create_git_worktree()
+      end, { desc = "Create Git worktree" })
+    end
+  }
 }
