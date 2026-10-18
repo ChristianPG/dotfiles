@@ -14,3 +14,4 @@ tmux/plugins/
 
 fish/*
 !/fish/config.fish
+!/fish/fish_plugins
