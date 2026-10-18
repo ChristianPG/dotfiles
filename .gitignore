@@ -1,4 +1,14 @@
-.DS_STORE
+.DS_Store
+
+# Editor swap/backup files
+*.swp
+*.swo
+*~
+
+# Neovim
+tags
+test.sh
+.luarc.json
 
 tmux/plugins/
 
