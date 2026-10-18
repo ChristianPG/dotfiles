@@ -2,5 +2,5 @@
 
 tmux/plugins/
 
-# Universal variables are per-machine state written by fish itself, not config.
-fish/fish_variables
+fish/*
+!/fish/config.fish
